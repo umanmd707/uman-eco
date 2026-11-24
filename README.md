@@ -32,6 +32,24 @@ UMAN-ECO is a **mobile-friendly Progressive Web App (PWA)** that demonstrates ho
 
 The application adapts to phone and desktop widths, including a dedicated mobile workspace selector. On supported browsers it can be **installed as a PWA** from the browser's installation menu. GitHub Pages hosts the static files; no server or application account is required. The optional service worker caches application assets for offline access after an initial successful visit; users may need to reload to receive a newly published version. Browser installation support varies by device and browser.
 
+### Install UMAN-ECO on a phone (PWA)
+
+The same GitHub Pages application can be added to a phone's home screen; a separate Android APK or iOS App Store download is **not required** for this academic demonstration.
+
+**Android (Chrome)**
+
+1. Open [UMAN-ECO](https://umanmd707.github.io/uman-eco/) in Chrome.
+2. Tap the **three-dot menu (⋮)**, then select **Install app**, **Install and create shortcut**, or **Add to Home screen** (wording depends on Chrome version).
+3. Follow the prompts, then open **UMAN-ECO** from the home screen.
+
+**iPhone (Safari)**
+
+1. Open [UMAN-ECO](https://umanmd707.github.io/uman-eco/) in Safari.
+2. Tap **Share** (or **Page Menu → Share**) and choose **Add to Home Screen**.
+3. Enable **Open as Web App** if available, tap **Add**, and launch it from the home screen.
+
+Installation is optional; the site remains usable directly in a mobile browser. The app uses browser-local data, which is **not synchronized across phones or browsers**; offline access depends on successful initial caching. Avoid uploading personal, confidential, or production data. For general installation guidance, see [Google Chrome Help](https://support.google.com/chrome/answer/9658361) and [Apple Support](https://support.apple.com/guide/iphone/turn-a-website-into-an-app-iphea86e5236/ios).
+
 ## Repository structure and file purposes
 
 The following inventory reflects the **v2.1 repository layout**. Application source files are separate from the synthetic sample data, optional downloads and project documentation.

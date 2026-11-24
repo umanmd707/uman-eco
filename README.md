@@ -5,7 +5,7 @@
 > [!IMPORTANT]
 > **ACADEMIC DEMONSTRATION ONLY — NOT A PRODUCTION PRODUCT OR SERVICE**
 >
-> This project was prepared for **SUS-701 Assignment 4: Become a Green or Blue Entrepreneur (2026)**, under the chosen topic **“Carbon Footprint Tracking App — Design a mobile platform helping individuals or businesses reduce emissions.”** The prototype focuses on **businesses**, and uses illustrative or unverified data. It is not a certified carbon-accounting tool, commercial offering, or managed service. It does not measure or verify real emissions reductions or implement real infrastructure changes.
+> This project was prepared for **SUS-701 Assignment 4: Become a Green or Blue Entrepreneur (2026)**, under the chosen topic **“Carbon Footprint Tracking App — Design a mobile platform helping individuals or businesses reduce emissions.”** The prototype focuses on **businesses** and uses illustrative or unverified data. It is not a certified carbon-accounting tool, commercial offering, or managed service. It does not measure or verify real emissions reductions or implement real infrastructure changes.
 
 ## Overview
 
@@ -13,28 +13,85 @@
 
 UMAN-ECO is a **mobile-friendly Progressive Web App (PWA)** that demonstrates how a business could record electricity usage by reporting month and business unit, estimate associated operational emissions, follow trends, set illustrative reduction targets, compare optimization scenarios, and explore rule-based, simulated GreenOps decisions.
 
+**Live academic demonstration:** [UMAN-ECO on GitHub Pages](https://umanmd707.github.io/uman-eco/)
+
 ## Workspaces
 
 | Workspace | Academic demonstration |
 | --- | --- |
 | **Overview** | Business-focused introduction, illustrative portfolio summary and access to carbon tracking |
-| **Carbon Footprint Tracker — new** | Monthly records by business unit; estimated operational emissions; trends; target progress; add/edit/delete records; CSV/JSON import and CSV export |
+| **Carbon Footprint Tracker** | Monthly records by business unit; estimated operational emissions; trends; target progress; add/edit/delete records; CSV/JSON import and CSV export |
 | **Quick Simulator** | Assumption-driven annual energy, emissions and cost scenarios; CSV output and shareable inputs |
 | **Carbon Intelligence** | Eight sample AWS, Azure, GCP and on-prem workloads; PUE, illustrative grid factors, embodied allocations and rebound scenarios |
 | **GreenOps Lab** | Deterministic *hypothetical* recommendations, constraint evaluation and simulated human decisions |
 | **Evidence & Audit** | Browser-local simulation decision history, **not** a secure, immutable or independently verified audit trail |
-| **Venture & Impact — new** | Customers, value proposition, proposed revenue and cost structure, environmental/social/economic value, SDGs, governance, stakeholders and scaling considerations |
+| **Venture & Impact** | Customers, value proposition, proposed revenue and cost structure, environmental/social/economic value, SDGs, governance, stakeholders and scaling considerations |
 | **Methodology** | Equations, limitations, accounting boundaries and references |
 
 ### Mobile access
 
-The application adapts to phone and desktop widths, including a dedicated mobile workspace selector. On supported browsers it can be **installed as a PWA** from the browser's installation menu. GitHub Pages hosts the static files; no server or application account is required. The optional service worker caches application assets for offline access after an initial successful visit; users must reload to receive a newly published version. Browser installation support varies by device and browser.
+The application adapts to phone and desktop widths, including a dedicated mobile workspace selector. On supported browsers it can be **installed as a PWA** from the browser's installation menu. GitHub Pages hosts the static files; no server or application account is required. The optional service worker caches application assets for offline access after an initial successful visit; users may need to reload to receive a newly published version. Browser installation support varies by device and browser.
+
+## Repository structure and file purposes
+
+The following inventory reflects the **v2.1 repository layout**. Application source files are separate from the synthetic sample data, optional downloads and project documentation.
+
+```text
+uman-eco/
+├── index.html
+├── assets/
+│   ├── app.js
+│   ├── tracker.js
+│   ├── mobile-nav.js
+│   ├── pwa.js
+│   ├── styles.css
+│   ├── icon-192.png
+│   └── icon-512.png
+├── data/
+│   ├── sample-workloads.csv
+│   └── sample-monthly-tracker.csv
+├── downloads/
+│   ├── UMAN-ECO-v2-Sample-Workloads.xlsx
+│   └── UMAN-ECO-v2.1-Monthly-Tracker.xlsx
+├── manifest.webmanifest
+├── service-worker.js
+├── README.md
+├── METHODOLOGY.md
+├── TEST-CHECKLIST.md
+├── VALIDATION.md
+├── DEPLOY-GITHUB-PAGES.md
+└── _headers
+```
+
+| Path | Purpose |
+| --- | --- |
+| `index.html` | Main application layout, workspace markup and entry point. |
+| `assets/styles.css` | Theme, components and responsive desktop/mobile styling. |
+| `assets/app.js` | Original simulator, portfolio carbon intelligence, simulated GreenOps decisions and browser-local audit functionality. |
+| `assets/tracker.js` | Monthly carbon records, charts, targets, filters, validation and data import/export. |
+| `assets/mobile-nav.js` | Workspace selection on smaller screens. |
+| `assets/pwa.js` | Service-worker registration in compatible browsers. |
+| `assets/icon-192.png`, `assets/icon-512.png` | Application icons used by the PWA manifest. |
+| `data/sample-workloads.csv` | Eight synthetic enterprise workload records used to illustrate portfolio emissions and optimization. |
+| `data/sample-monthly-tracker.csv` | Synthetic monthly carbon-tracking observations across reporting periods and business units. |
+| `downloads/UMAN-ECO-v2-Sample-Workloads.xlsx` | Offline sample-workload workbook. |
+| `downloads/UMAN-ECO-v2.1-Monthly-Tracker.xlsx` | Offline monthly tracker workbook with illustrative calculations. |
+| `manifest.webmanifest` | PWA identity, display preferences, launch path and icon declarations. |
+| `service-worker.js` | Static-asset caching to support limited offline use; not a backup or synchronization system. |
+| `README.md` | Overview, use instructions, file inventory, limitations and public-use notices. |
+| `METHODOLOGY.md` | Formulas, data boundaries, assumptions and accounting caveats. |
+| `TEST-CHECKLIST.md` | General functional and publication checks for this prototype. |
+| `VALIDATION.md` | Scope and limits of the tests performed during development. |
+| `DEPLOY-GITHUB-PAGES.md` | GitHub Pages publishing and verification instructions. |
+| `_headers` | A leftover hosting-specific header configuration file. **GitHub Pages does not apply it as HTTP response headers**; it is not needed for the application and can be removed. |
+
+The `assets/`, `data/`, and PWA files are part of the functioning website. The Markdown files are reference documentation, not required for browser execution. The Excel workbooks are optional offline resources. The application does **not** require `ASSIGNMENT-ALIGNMENT.md`; faculty assessment mapping can be maintained separately from the public repository.
 
 ## GitHub Pages deployment
 
 1. Place the **contents** of the release package in the repository root, so that `index.html`, `assets/`, `data/` and `manifest.webmanifest` are directly accessible. Do **not** upload only the ZIP archive.
 2. In **Settings → Pages**, choose **Deploy from a branch** and select `main` / `/(root)`.
-3. Open the published site, for example: **https://umanmd707.github.io/uman-eco/**.
+3. Open the published site: **https://umanmd707.github.io/uman-eco/**.
 4. Confirm the tracker and simulator load on desktop and mobile. A hard refresh and app restart can help clear a previous installed PWA release.
 
 See [DEPLOY-GITHUB-PAGES.md](DEPLOY-GITHUB-PAGES.md) and [TEST-CHECKLIST.md](TEST-CHECKLIST.md).
@@ -71,9 +128,9 @@ CSV and JSON imports are validated client-side (up to 1,000 observations / 1 MiB
 
 Workload CSV columns are: `id,name,provider,region,itKwh,pue,factor,embodiedT,price,source,workload,criticality`.
 
-## Academic assignment alignment
+## Academic assignment context
 
-The site addresses the selected carbon-tracking-app **concept** and provides an illustrative enterprise model. [ASSIGNMENT-ALIGNMENT.md](ASSIGNMENT-ALIGNMENT.md) maps all **22 guiding questions** from the assignment brief to the relevant website sections and identifies evidence still needed in the accompanying report and presentation.
+The application illustrates the chosen **business-focused carbon footprint tracking** concept with a mobile-friendly interface and proposed approaches for tracking and reducing emissions. The project report and presentation should address the assignment's business model, sustainability benefits, stakeholders, costs, applicable policies, impact assessment and scaling strategy; this public repository does not separately maintain the faculty-question mapping.
 
 The website is **not a substitute** for the faculty-required separate written project report, professional **20–25 minute presentation** and **5-minute discussion**.
 

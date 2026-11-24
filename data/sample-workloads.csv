@@ -1,0 +1,9 @@
+id,name,provider,region,itKwh,pue,factor,embodiedT,price,source,workload,criticality
+W01,AI batch inference,AWS,US East,72000,1.2,0.36,3.2,0.12,Assumed,Batch,Low
+W02,Customer API,AWS,US West,64000,1.2,0.24,2.8,0.14,Assumed,Always-on,High
+W03,Analytics pipeline,Azure,US Central,51000,1.23,0.41,2.1,0.13,Assumed,Batch,Medium
+W04,Internal dev/test,Azure,EU North,32000,1.18,0.09,1.4,0.17,Assumed,Flexible,Low
+W05,GPU model training,GCP,US Central,112000,1.15,0.4,6.5,0.16,Assumed,Batch,Medium
+W06,Data warehouse,GCP,EU West,45000,1.15,0.19,2.4,0.14,Assumed,Always-on,High
+W07,Legacy VM cluster,On-prem,US East,98000,1.55,0.36,7.8,0.11,Assumed,Always-on,Medium
+W08,Backup / archive,On-prem,US West,27000,1.55,0.24,2.2,0.11,Assumed,Flexible,Low

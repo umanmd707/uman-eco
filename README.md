@@ -1,65 +1,116 @@
-# UMAN-ECO Enterprise Lab v2.0
+# UMAN-ECO — Enterprise Carbon Optimization
+### Enterprise Lab v2.0 | Part of the UMAN Framework Family
 
-**Part of the UMAN Framework Family** — UMAN (Unified Modernization and Architecture Navigator).
+> [!IMPORTANT]
+> **ACADEMIC DEMONSTRATION ONLY — NOT A PRODUCTION PRODUCT OR SERVICE**
+>
+> UMAN-ECO Enterprise Lab v2.0 was prepared as an **individual educational prototype for the SUS-701 Green Entrepreneurship assignment (2026)**. It is published to illustrate a proposed sustainable-computing venture and its technical concepts. **It is not a commercial offering, a managed service, a certified emissions-accounting system, or an operational decision tool.** All supplied workloads, environmental factors, modeled results, recommendations, roles, approvals, and audit examples are **synthetic or assumption-based**. Do not treat any output as measured savings, verified emissions, a compliance assertion, or advice for real infrastructure changes.
 
-A standalone static web app for education, exploratory sustainable computing analysis, and simulated policy-based GreenOps decisions.
+## About UMAN and UMAN-ECO
 
-## Deploy to your EXISTING Netlify site (keeps your URL)
+**UMAN (Unified Modernization and Architecture Navigator)** is an independently developed family of architecture frameworks exploring structured assessment, modernization, responsible innovation, and systems thinking. Related areas include **UMAN-AI** (AI readiness), **UMAN-GREEN** (sustainable enterprise architecture), and **UMAN-QI** (quantum technology exploration).
 
-1. Extract `UMAN-ECO-Enterprise-Lab-v2.0.zip` on your computer.
-2. Open the **existing** `uman-eco` project at https://app.netlify.com/.
-3. Select **Deploys** and find the manual upload / drag-and-drop area for a new production deployment.
-4. Drag the **UMAN-ECO-Enterprise-Lab-v2** folder (the folder containing `index.html`) to that area. Do not upload the parent directory, and do not upload only index.html.
-5. After Netlify marks the deployment published, visit https://uman-eco.netlify.app/ in a private browser window and refresh.
-6. If your site is connected to Git, use the repo deployment flow instead; manual deploys are not the preferred ongoing workflow for a Git-connected site.
+**UMAN-ECO (Enterprise Carbon Optimization)** applies selected sustainable-architecture concepts to a **hypothetical green-entrepreneurship software venture**. This repository showcases a browser-based simulator and mock enterprise workflows; it does not represent a market-ready UMAN product.
 
-Netlify serves `index.html` from the site root; this package requires **no build command**, dependencies, API keys, or server-side functions. Alternatively open `index.html` directly on your computer in a modern browser.
+**Academic context:** SUS-701, Assignment 4 — *Become a Green or Blue Entrepreneur* (2026).
 
-## Package map
+## What this demonstration includes
 
-- `index.html` — website markup
-- `assets/styles.css` — responsive visual design
-- `assets/app.js` — all modeling, scenario and interaction logic
-- `data/sample-workloads.csv` — importable illustrative portfolio with eight workloads
-- `METHODOLOGY.md` — formulas, provenance and major cautions
-- `TEST-CHECKLIST.md` — deployment and functional validation
-- `netlify.toml` — static deployment configuration and basic browser security headers
+| Workspace | Educational capabilities |
+| --- | --- |
+| Overview | Sample portfolio KPIs and UMAN framework context |
+| Quick Simulator | Assumption-driven electricity, emissions and cost scenarios; CSV export and URL sharing of simulator inputs |
+| Carbon Intelligence | Eight illustrative multi-provider workloads; PUE, regional factors, allocated embodied carbon, efficiency and rebound scenarios; CSV/JSON dataset import/export |
+| GreenOps Decision Lab | Deterministic mock recommendations, constraint checks, role/persona selection and simulated approval/rejection |
+| Evidence & Audit | Browser-local decision history and CSV export — **not** a secure or immutable audit trail |
+| Methodology | Equations, assumptions, accounting boundaries and known limitations |
 
-## User journey
+**No real cloud connectors are implemented.** References to AWS, Azure, GCP, VMware, Kubernetes, regions and operational personas are illustrative. The application does not authenticate to cloud accounts, ingest live telemetry, change infrastructure or execute optimization policies.
 
-1. **Overview**: sample portfolio KPI summary and UMAN relationship.
-2. **Quick Simulator**: annual baseline, reduction, cost and emissions estimates; export CSV and share inputs by URL.
-3. **Carbon Intelligence**: provider filtering; facility-energy/PUE modeling; grid factor; allocated embodied emissions; efficiency/rebound scenarios; CSV/JSON dataset import/export.
-4. **GreenOps Lab**: deterministic simulated policy checks, persona-aware approval/rejection, estimated carbon/cost/latency impacts. No real actions.
-5. **Evidence & Audit**: local decision history and CSV export. LocalStorage is NOT tamper-evident.
-6. **Methodology**: transparent equations, limitations and future standards alignment.
+## View it locally
 
-## Supported CSV input
+1. Download or clone this repository.
+2. Open the root-level `index.html` in a modern browser.
+3. Explore the preloaded sample workloads, or import non-sensitive test data.
 
-Required columns: `id,name,provider,region,itKwh,pue,factor,embodiedT,price,source,workload,criticality`.
+The website requires **no build, API keys, dependency installation, backend or database** for its demonstrated functionality. It is a static HTML/CSS/JavaScript application; data and mock audit records are handled in the browser.
 
-- `provider`: one of `AWS`, `Azure`, `GCP`, `On-prem`
-- `itKwh`: nonnegative annual IT electricity (not already facility electricity)
-- `pue`: >= 1 and <= 5
-- `factor`: nonnegative assumed location-based kg CO2e/kWh (<= 3)
-- `embodiedT`: annual allocated embodied tons CO2e (nonnegative)
-- `price`: USD/kWh, nonnegative
-- `workload`: `Batch`, `Always-on`, or `Flexible`
-- `criticality`: `Low`, `Medium`, or `High`
-- Maximum 500 rows / 2 MB. CSV imports replace the full sample set (saved only in this browser). JSON imports accept an array of objects with identical field names.
+## Publish as a GitHub Pages academic demonstration
 
-**All demo data is synthetic.** Imported data is not authenticated or validated against metering systems. App code and data are available to users who can open the website.
+1. Create a **public** GitHub repository (for example, `uman-eco`).
+2. Upload the **contents** of this package so `index.html` is in the repository **root**, alongside `assets/` and `data/`. Do **not** upload only the ZIP archive.
+3. Open your repository's **Settings → Pages**.
+4. Under **Build and deployment**, select **Deploy from a branch**.
+5. Select the `main` branch and `/(root)` directory; select **Save**.
+6. Once deployment is complete, use the URL GitHub shows under **Settings → Pages**, typically `https://YOUR-USERNAME.github.io/uman-eco/`.
 
-## Limitations / safety
+See [`DEPLOY-GITHUB-PAGES.md`](DEPLOY-GITHUB-PAGES.md) for a short publishing checklist. The included `.nojekyll` file disables unnecessary Jekyll processing. GitHub Pages is intended here for an **academic static showcase**, not to operate a commercial SaaS product.
 
-- **No real AWS, Azure, GCP, Kubernetes or VMware connectors.** No remote network calls or infrastructure modifications.
-- No IAM, RBAC, SOC 2 compliance, certified carbon inventory, or regulatory reporting capability. The demo persona selector is an interaction mock, not authentication.
-- Grid intensity is an illustrative annual factor. It is not real-time data or marginal grid intensity.
-- Operational and embodied emissions are modeled, not verified. PUE applies only to IT electricity.
-- LocalStorage is convenient for demos but not durable, secure, shared, append-only or immutable evidence.
-- URL sharing only captures the Quick Simulator inputs; imported workload data and audit records are **not** shared.
-- No analytics or backend service is intentionally called; the site may still be subject to the hosting provider's normal request logs.
+## Repository structure
 
-## Recommended next phase
+```text
+index.html                      Static app entry point
+assets/styles.css               Visual design and responsive styling
+assets/app.js                   Client-side simulation and interactions
+data/sample-workloads.csv       Synthetic 8-workload dataset
+downloads/*.xlsx                Offline sample-workload workbook
+METHODOLOGY.md                  Model assumptions and calculation notes
+TEST-CHECKLIST.md               Functional validation checklist
+DEPLOY-GITHUB-PAGES.md          Publication instructions
+.nojekyll                       GitHub Pages static-site configuration
+```
 
-Add a secure backend, validated factor provenance, time-series ingestion, tenant-aware RBAC/SSO, versioned calculation records, consented connectors, independent verification and controlled change execution with rollback.
+## Dataset import requirements
+
+CSV input requires these exact columns:
+
+`id,name,provider,region,itKwh,pue,factor,embodiedT,price,source,workload,criticality`
+
+- `provider`: `AWS`, `Azure`, `GCP`, or `On-prem`.
+- `itKwh`: nonnegative **annual IT electricity**, before PUE.
+- `pue`: between 1 and 5.
+- `factor`: assumed grid emissions factor, in kg CO2e/kWh, from 0 to 3.
+- `embodiedT`: nonnegative, illustrative annual allocated embodied tCO2e.
+- `price`: nonnegative USD/kWh.
+- `workload`: `Batch`, `Always-on`, or `Flexible`.
+- `criticality`: `Low`, `Medium`, or `High`.
+- Imports allow up to 500 rows / 2 MB. Import replaces the sample dataset **in the current browser only**. JSON import accepts an array of objects with the same fields.
+
+## Modeling scope and limitations
+
+- Facility electricity = modeled IT electricity × assumed PUE.
+- Operational tCO2e = facility kWh × assumed grid emissions factor ÷ 1,000.
+- Optional allocated embodied emissions are **illustrative** and are not independently established from hardware life-cycle inventories.
+- Scenario efficiency, rebound, electricity prices and regional factors are user assumptions, not predictions or validated measurements.
+- Recommendations and synthetic latency/cost effects are **demonstrations of decision logic**, not engineering assessments or guarantees.
+- Persona selection is a UI simulation, **not authentication, authorization or real role-based access control**.
+- The local audit log is editable/removable browser storage, **not tamper-evident evidence**.
+- The software is **not SOC 2 audited, ISO certified, GHG Protocol verified, or suitable for official ESG, regulatory, financial, compliance or carbon-credit reporting**.
+- Third-party methodologies referenced in the documentation inform a possible future design; reference to them is **not an endorsement, conformity assessment or certification**.
+
+See [METHODOLOGY.md](METHODOLOGY.md) for calculation boundaries, assumptions and double-counting cautions.
+
+## Public-use notice, disclaimers and rights
+
+**Educational purpose; no public offering.** Publication of this repository or demonstration site is for academic review and technical illustration only. It is not an invitation to purchase, subscribe, invest, contract, obtain professional advice or rely on any particular functionality or outcome. The presence of mock enterprise features or future-work descriptions does **not** commit the author to deliver a product, service, integration or roadmap item.
+
+**No service or support commitment.** This project is provided voluntarily, without a service-level agreement, uptime commitment, maintenance schedule, security-patch promise, help desk, support response obligation, or promise to continue hosting or updating it. Features, access and content may change or be withdrawn without notice.
+
+**No warranties or reliance.** The materials and software are provided **“AS IS” and “AS AVAILABLE,” without warranties or guarantees of accuracy, availability, fitness for a particular purpose, compliance, security or results, to the extent allowed by applicable law**. Outputs are exploratory estimates only. Visitors remain responsible for independently verifying any information before using it in a real-world context. **Do not use this demonstration to make operational, investment, financial, legal, regulatory, reporting or environmental claims.**
+
+**Limitation of responsibility.** To the extent permitted by applicable law, the author disclaims liability for losses or consequences arising from reliance on, use of, inability to use, or redistribution of this educational prototype. **This notice does not override mandatory legal rights or obligations** and does not itself guarantee immunity from legal claims.
+
+**No affiliation or endorsement.** UMAN-ECO is an independently developed academic concept. It is not presented as an official project, product, representation, or endorsement of the author's employer, the educational institution, cloud providers, standards organizations, or any other third party mentioned for context.
+
+**Privacy and security.** Do **not** upload personal, confidential, proprietary, regulated, production or credential-bearing data. The demonstration intentionally uses browser-local state rather than a project backend; imported datasets and mock decision histories can remain in local browser storage until cleared. Shared scenario URLs can expose encoded inputs to recipients and potentially to browser histories or hosting logs. GitHub or another hosting provider may collect standard request and security logs under its own policies. No security controls suitable for enterprise or regulated data are claimed.
+
+**Copyright and reuse.** Copyright © 2026 **Uman Ahmed Mohammed**. All rights reserved except rights expressly granted under applicable law or platform terms. This repository does **not** include an open-source license or grant general permission to reuse, modify, redistribute or commercialize the code and materials. Publishing it publicly on GitHub nonetheless permits uses inherent to GitHub's platform terms (including viewing and forking on GitHub). Anyone considering broader reuse should obtain appropriate permission and evaluate applicable third-party rights.
+
+## Project status
+
+**Status:** Academic proof of concept / exploratory simulation.  
+**Version:** Enterprise Lab v2.0.  
+**External integrations:** None.  
+**Production readiness:** Not production-ready.  
+**Commercial availability:** Not offered.  
+**Future enhancements:** Illustrative possibilities only; no delivery or support commitments.

@@ -8,7 +8,7 @@
 
 ## About UMAN and UMAN-ECO
 
-**UMAN (Unified Modernization and Architecture Navigator)** is an independently developed family of architecture frameworks exploring structured assessment, modernization, responsible innovation, and systems thinking. Related areas include **UMAN-AI** (AI readiness), **UMAN-GREEN** (sustainable enterprise architecture), and **UMAN-QI** (quantum technology exploration).
+**UMAN (Unified Modernization and Architecture Navigator)** is an independently developed family of architecture frameworks exploring structured assessment, modernization, responsible innovation, and systems thinking. Related areas include AI readiness, sustainable enterprise architecture, and quantum technology exploration.
 
 **UMAN-ECO (Enterprise Carbon Optimization)** applies selected sustainable-architecture concepts to a **hypothetical green-entrepreneurship software venture**. This repository showcases a browser-based simulator and mock enterprise workflows; it does not represent a market-ready UMAN product.
 

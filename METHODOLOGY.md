@@ -40,3 +40,19 @@ Rules propose one of scheduling, right-sizing, or idle consolidation for each wo
 - ISO 14064 family for GHG accounting and verification.
 
 **Do not claim compliance or certification** based on the demo. Production accounting needs verified data, defensible factors and formal methodological validation.
+
+## Phase 2.1: Monthly carbon footprint tracker
+
+For each distinct reporting month and business unit:
+
+- **Estimated operational emissions (tCO₂e)** = `facilityKwh × factorKg / 1,000`.
+- **Estimated electricity cost (USD)** = `facilityKwh × priceUsd`.
+- Multiple units in one month are summed only if they represent **non-overlapping reporting boundaries**.
+- The historical tracker intentionally uses **facility electricity**, not IT electricity, and therefore **does not apply PUE again**.
+- Historical tracker excludes embodied emissions and market-based Scope 2 contractual instruments. It does not establish a complete organizational GHG inventory.
+
+The reduction target is compared with two equal three-month windows (three earliest and three latest distinct reporting months) for at least six reporting periods, assuming a non-zero baseline. This comparison is not seasonally adjusted, normalized to service delivered, or causally linked to the simulated recommendations. Emissions changes could result from different factor assumptions, workload demand, seasons or reporting boundaries.
+
+All provided monthly rows are **synthetic**. Imported and manually entered rows are **unverified** and retained only in the current browser. No real electricity meters, utility accounts, enterprise APIs or external emission factor services are connected.
+
+For authoritative background: [GHG Protocol Scope 2 Guidance](https://ghgprotocol.org/scope-2-guidance), [ISO/IEC 21031:2024](https://www.iso.org/standard/86612.html), and [UN Sustainable Development Goals](https://sdgs.un.org/goals). References are not a claim of validation or certification.

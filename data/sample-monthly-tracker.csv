@@ -1,0 +1,25 @@
+period,businessUnit,facilityKwh,factorKg,priceUsd,source
+2025-11,Cloud Platforms,31800.0,0.355,0.12,Synthetic / demonstration
+2025-11,AI & Analytics,21800.0,0.336,0.15,Synthetic / demonstration
+2025-12,Cloud Platforms,31823.15,0.346,0.12,Synthetic / demonstration
+2025-12,AI & Analytics,21603.8,0.342,0.15,Synthetic / demonstration
+2026-01,Cloud Platforms,30782.4,0.337,0.12,Synthetic / demonstration
+2026-01,AI & Analytics,21407.6,0.348,0.15,Synthetic / demonstration
+2026-02,Cloud Platforms,30273.6,0.328,0.12,Synthetic / demonstration
+2026-02,AI & Analytics,21741.68,0.33,0.15,Synthetic / demonstration
+2026-03,Cloud Platforms,29764.8,0.355,0.12,Synthetic / demonstration
+2026-03,AI & Analytics,21015.2,0.336,0.15,Synthetic / demonstration
+2026-04,Cloud Platforms,29256.0,0.346,0.12,Synthetic / demonstration
+2026-04,AI & Analytics,20819.0,0.342,0.15,Synthetic / demonstration
+2026-05,Cloud Platforms,29235.9,0.337,0.12,Synthetic / demonstration
+2026-05,AI & Analytics,20622.8,0.348,0.15,Synthetic / demonstration
+2026-06,Cloud Platforms,28238.4,0.328,0.12,Synthetic / demonstration
+2026-06,AI & Analytics,20426.6,0.33,0.15,Synthetic / demonstration
+2026-07,Cloud Platforms,27729.6,0.355,0.12,Synthetic / demonstration
+2026-07,AI & Analytics,20736.16,0.336,0.15,Synthetic / demonstration
+2026-08,Cloud Platforms,27220.8,0.346,0.12,Synthetic / demonstration
+2026-08,AI & Analytics,20034.2,0.342,0.15,Synthetic / demonstration
+2026-09,Cloud Platforms,26712.0,0.337,0.12,Synthetic / demonstration
+2026-09,AI & Analytics,19838.0,0.348,0.15,Synthetic / demonstration
+2026-10,Cloud Platforms,26203.2,0.328,0.12,Synthetic / demonstration
+2026-10,AI & Analytics,19641.8,0.33,0.15,Synthetic / demonstration

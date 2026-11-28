@@ -9,7 +9,7 @@
 
 ## Overview
 
-**UMAN (Unified Modernization and Architecture Navigator)** is an independently developed family of enterprise architecture approaches. **UMAN-ECO (Enterprise Carbon Optimization)** explores a proposed green entrepreneurship application of sustainable computing concepts informed by UMAN-GREEN.
+**UMAN (Unified Modernization and Architecture Navigator)** is an independently developed family of enterprise architecture approaches. **UMAN-ECO (Enterprise Carbon Optimization)** explores a proposed green entrepreneurship application of sustainable computing and enterprise carbon optimization concepts.
 
 UMAN-ECO is a **mobile-friendly Progressive Web App (PWA)** that demonstrates how a business could record electricity usage by reporting month and business unit, estimate associated operational emissions, follow trends, set illustrative reduction targets, compare optimization scenarios, and explore rule-based, simulated GreenOps decisions.
 

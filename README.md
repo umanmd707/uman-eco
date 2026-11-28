@@ -174,7 +174,7 @@ See [METHODOLOGY.md](METHODOLOGY.md) for accounting boundaries, interpretation a
 
 **Privacy.** Do **not** enter or upload personal, confidential, proprietary, credential-bearing, regulated or production data. Input and mock decision histories may remain in the browser's local storage. Shareable URLs can expose their embedded simulator assumptions to recipients and URL logs. GitHub Pages and browser vendors may independently process ordinary website request or diagnostic information according to their policies.
 
-**Copyright.** Copyright © 2026 Uman Ahmed Mohammed. All rights reserved, subject to applicable law and GitHub's platform terms. **No open-source license is granted.** Public availability does not authorize general reproduction, redistribution or commercial exploitation beyond applicable rights and platform terms.
+**Copyright**. © 2026 Uman Ahmed Mohammed. All rights reserved to the extent applicable. No open-source license is granted. Public availability does not grant general permission to reproduce, modify, redistribute or commercially exploit the project materials, except as permitted by applicable law and GitHub's Terms of Service. See COPYRIGHT.md for the copyright and usage notice.
 
 ## Status
 
